@@ -40,6 +40,6 @@ npm run build #生成生产环境 输出目录/www/frontend/dist
 └── README.md                   // 项目说明
 ```
 
-[**前端React项目**](http://10.20.143.38:8090/hnacargo/hnacargoofpythonweb/blob/master/www/frontend/README.md)
+[**前端React项目**](https://github.com/dusunboy/MyFlaskReact/blob/master/www/frontend/README.md)
 
-[**后端Python项目**](http://10.20.143.38:8090/hnacargo/hnacargoofpythonweb/blob/master/www/backtend/README.md)
+[**后端Python项目**](https://github.com/dusunboy/MyFlaskReact/blob/master/www/backtend/README.md)
