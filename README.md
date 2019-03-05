@@ -1,4 +1,4 @@
-# Flask + Nginx + Vue + Uwsgi 部署环境
+# Flask + Nginx + React + Uwsgi 部署环境
 
 ## 安装步骤
 
