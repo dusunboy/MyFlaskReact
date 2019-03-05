@@ -1,0 +1,71 @@
+version: '3'
+services:
+
+  flask:
+    hostname: flask
+    build:
+      context: ./flask
+      dockerfile: Dockerfile
+    networks:
+      npm_net:
+        ipv4_address: 172.18.0.101
+    depends_on:
+      - mysql
+    links: 
+      - mysql:mysql 
+    volumes:
+      - ./flask/:/flask
+      - ./log:/log
+      - ./www/:/www
+    restart: always
+    privileged: true    
+    ports:
+      - "10022:22"
+      - 10080:80
+      - 10081:8080
+    # environment:
+    #   - LANG=zh_CN.UTF-8
+    command: 
+      - sh
+      - -c
+      - |
+          mkdir ~/.pip
+          touch ~/.pip/pip.conf
+          pip install --upgrade pip
+          cp /flask/pip.conf ~/.pip/pip.conf 
+          /usr/sbin/sshd -D &
+          pip3 install -r /flask/requirements.txt
+          pip3 list
+          cp /flask/nginx.conf /etc/nginx/
+          cp /flask/flask-nginx.conf /etc/nginx/conf.d/
+          cp /flask/react-nginx.conf /etc/nginx/conf.d/
+          cp /flask/uwsgi.ini /etc/uwsgi/
+          cp /flask/supervisord.conf /etc/supervisord.conf
+          /usr/bin/supervisord
+          
+
+  mysql:
+    hostname: mysql
+    image: mysql:5.7
+    networks:
+      npm_net:
+        ipv4_address: 172.18.0.100
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+    command: --character-set-server=utf8
+    restart: always
+    privileged: true
+    ports:
+      - 13306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: test2018
+
+networks:
+  npm_net:
+    driver: bridge ## 网络的模式
+    ipam: ## 配置网络
+      driver: default
+      config:
+        - subnet: 172.18.0.0/16
+

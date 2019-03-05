@@ -1,0 +1,5 @@
+flask
+flask-sqlalchemy
+PyMySQL
+loguru
+flask-cors
