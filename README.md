@@ -43,11 +43,3 @@ npm run build #生成生产环境 输出目录/www/frontend/dist
 [**前端React项目**](http://10.20.143.38:8090/hnacargo/hnacargoofpythonweb/blob/master/www/frontend/README.md)
 
 [**后端Python项目**](http://10.20.143.38:8090/hnacargo/hnacargoofpythonweb/blob/master/www/backtend/README.md)
-
-## 开发规范
-
-[**Python编码规范**](http://10.20.143.38:8090/hnacargo/hnacargoofpythonweb/wikis/Python%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83)
-
-[**ES6 编码规范**](http://10.20.143.38:8090/hnacargo/hnacargoofpythonweb/wikis/ES6-%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83)
-
-[**React/JSX 编码规范**](http://10.20.143.38:8090/hnacargo/hnacargoofpythonweb/wikis/React-JSX-%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83)

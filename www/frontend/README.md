@@ -18,3 +18,11 @@
 ├── .umirc.local.js              // 本地配置文件
 └── README.md                    // 项目说明
 ```
+
+## 更新新版本UmiJs
+
+frontend目录下
+
+``` bash
+npm i umi
+```
