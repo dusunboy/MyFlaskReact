@@ -1,5 +1,10 @@
 # Flask + Nginx + React + Uwsgi 部署环境
 
+## 安装源码
+
+* [使用脚手架生成项目**fw-cli**](https://github.com/dusunboy/fw-cli)
+* 可下载项目直接使用
+
 ## 安装步骤
 
 安装前准备Docker Compose环境以及Npm环境
