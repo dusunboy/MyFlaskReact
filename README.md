@@ -3,7 +3,7 @@
 ## 安装源码
 
 * [使用脚手架生成项目**fw-cli**](https://github.com/dusunboy/fw-cli)
-* 可下载项目直接使用
+* 可直接下载项目
 
 ## 安装步骤
 
